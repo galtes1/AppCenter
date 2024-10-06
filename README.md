@@ -26,7 +26,7 @@ https://git-scm.com/downloads
 
 To get the source code for the GamesHub application, you can clone the repository using Git.
 
-git clone: https://github.com/galtes1/
+git clone: https://github.com/galtes1/AppCenter
 
 
 ## Building the Application
