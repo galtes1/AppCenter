@@ -1,7 +1,7 @@
 
 # AppCenter Application
 
-Welcome to the GamesHub application! This C# and WPF project features some classic games including Pacman, Tic Tac Toe, Snake, Infinte Runner, and usful apps such as Calculator, and a Weather app. This application was developed using C# and WPF (Windows Presentation Foundation), providing a fun collection of games all in one place.
+Welcome to the AppCenter application! This C# and WPF project features some classic games including Pacman, Tic Tac Toe, Snake, Infinte Runner, and usful apps such as Calculator, and a Weather app. This application was developed using C# and WPF (Windows Presentation Foundation), providing a fun collection of games all in one place.
 
 
 ## Installation
