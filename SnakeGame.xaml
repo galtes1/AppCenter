@@ -1,0 +1,38 @@
+﻿<Window x:Class="AppCenter.SnakeGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppCenter"
+        mc:Ignorable="d"
+         WindowStyle="None"
+        Title="Sanke" Height="450" Width="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="Score: " Margin="10" FontSize="40"/>
+            <TextBlock x:Name="ScoreText" Text="0" Margin="0,10,10,10" FontSize="40"/>
+        </StackPanel>
+
+        <Viewbox Grid.Row="1" Stretch="Uniform" Margin="10">
+            <Grid>
+                <Border BorderBrush="Black" BorderThickness="2">
+                    <UniformGrid x:Name="GameGrid" Width="400" Height="400"/>
+                </Border>
+                <Border x:Name="GameOverOverlay" Background="#80000000" Visibility="Collapsed">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Game Over" FontSize="24" Foreground="White" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                        <Button x:Name="ResetButton" Content="Reset" FontSize="20" Padding="20,10" Click="ResetButton_Click"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Viewbox>
+        <Button x:Name="CloseButton" Content="Home" Margin="0,0,716,0" Click="CloseButton_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,146 @@
+﻿<Window x:Class="AppCenter.CalculatorApp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppCenter"
+        mc:Ignorable="d"
+        Title="Calculator" Height="450" Width="800"
+        KeyDown="Window_KeyDown"
+         WindowStyle="None">
+    <Viewbox>
+        <Grid>
+            <Label x:Name="label" Content="Mach Shevone" HorizontalAlignment="Right" Margin="26,10,0,0" VerticalAlignment="Top" Width="453" Height="51" Background="#FFFFC387" Foreground="#FF004B9E" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="36" VerticalContentAlignment="Stretch" Panel.ZIndex="3"/>
+
+            <TextBox x:Name="screen" HorizontalAlignment="Left" Margin="26,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="53" Background="#FFFFC387" Foreground="#FF004B9E" FontSize="36" FontWeight="Bold">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Button x:Name="seven" Content="7" HorizontalAlignment="Left" Margin="26,147,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36" Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="seven_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="eight" Content="8" HorizontalAlignment="Left" Margin="115,147,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36
+               " Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="eight_Click" VerticalContentAlignment="Stretch" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="nine" Content="9" HorizontalAlignment="Left" Margin="204,147,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36
+               " Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="nine_Click" VerticalContentAlignment="Stretch">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="four" Content="4" HorizontalAlignment="Left" Margin="26,206,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36
+               " Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="four_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="five" Content="5" HorizontalAlignment="Left" Margin="115,206,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36
+               " Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="five_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="six" Content="6" HorizontalAlignment="Left" Margin="204,206,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36
+               " Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="six_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="one" Content="1" HorizontalAlignment="Left" Margin="26,263,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36
+               " Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="one_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="two" Content="2" HorizontalAlignment="Left" Margin="115,263,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36
+               " Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="two_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="three" Content="3" HorizontalAlignment="Left" Margin="204,263,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36" Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="three_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="zero" Content="0" HorizontalAlignment="Left" Margin="26,320,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36" Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="zero_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="point" Content="." HorizontalAlignment="Left" Margin="115,320,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36" Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="point_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="clear" Content="C" HorizontalAlignment="Left" Margin="204,320,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36" Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="clear_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="lPar" Content="(" HorizontalAlignment="Left" Margin="334,147,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36" Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="lPar_Click" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="rPar" Content=")" HorizontalAlignment="Left" Margin="423,147,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36" Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="rPar_Click" VerticalContentAlignment="Stretch">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="plus" Content="+" HorizontalAlignment="Left" Margin="334,206,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36" Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="plus_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="minus" Content="-" HorizontalAlignment="Left" Margin="423,206,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36" Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="minus_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="mult" Content="x" HorizontalAlignment="Left" Margin="334,263,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36" Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="mult_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="div" Content="÷" HorizontalAlignment="Left" Margin="423,263,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36" Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="div_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="result" Content="=" HorizontalAlignment="Left" Margin="334,320,0,0" VerticalAlignment="Top" Height="53" Width="174" FontSize="36" Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="result_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="back"  HorizontalAlignment="Left" Margin="334,75,0,0" VerticalAlignment="Top" Height="53" Width="85" FontSize="36" Background="#FFFFC387" FontWeight="Bold" Foreground="#FF004B9E" Click="back_Click" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Image  Source="images/backspace.png"></Image>
+            </Button>
+            <Grid HorizontalAlignment="Left" Margin="436,83,0,0" VerticalAlignment="Top" Width="85" Height="53">
+                <!-- Background element -->
+                <Rectangle Fill="#FFFFC387" Margin="-13,-8,13,8" Stroke="Gray">
+                    <Rectangle.Effect>
+                        <DropShadowEffect/>
+                    </Rectangle.Effect>
+                </Rectangle>
+
+                <!-- Image element on top -->
+                <Image x:Name="Rotate"
+                  Source="images/calculator.png"
+                  VerticalAlignment="Top"
+                  Height="53"
+                  Stretch="Uniform" OpacityMask="Black" Margin="-12,-7,12,0"/>
+            </Grid>
+            <Button x:Name="HomeButton" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Height="47" Background="#FFFFC387" Foreground="#FF004B9E" FontWeight="Bold" Click="HomeButton_Click" />
+        </Grid>
+    </Viewbox>
+</Window>

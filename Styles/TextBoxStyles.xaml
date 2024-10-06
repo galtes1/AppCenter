@@ -1,0 +1,78 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Brush for Placeholder/Tag text -->
+    <SolidColorBrush x:Key="PlaceholderBrush" Color="#808080" />
+
+    <!-- Brush for Input Text -->
+    <SolidColorBrush x:Key="InputTextBrush" Color="#808080" />
+
+    <!-- TextBox Style -->
+    <Style TargetType="TextBox" x:Key="tBox_Txt">
+
+        <Setter Property="Foreground" Value="{StaticResource PlaceholderBrush}" />
+        <!-- Initially set to placeholder color -->
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="FontSize" Value="28" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="FontFamily" Value="Roboto" />
+
+        <!-- Set the placeholder text via the Tag property -->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Grid>
+                        <!-- Placeholder (Tag) text -->
+
+                        <TextBlock x:Name="PlaceholderText"
+                                   Text="{TemplateBinding Tag}"
+                                   Background="{StaticResource cs_BorderBrush}"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   FontSize="{TemplateBinding FontSize}"
+                                   FontFamily="{TemplateBinding FontFamily}"
+                                   Padding="{TemplateBinding Padding}"
+                                   VerticalAlignment="Center"
+                                   IsHitTestVisible="False"
+                                   Opacity="1" />
+
+                        <!-- Actual Text -->
+                        <ScrollViewer x:Name="PART_ContentHost"
+                                      Padding="{TemplateBinding Padding}"
+                                      VerticalAlignment="Center" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!-- When the TextBox has text, hide the placeholder -->
+                        <Trigger Property="Text" Value="">
+                            <Setter TargetName="PlaceholderText" Property="Opacity" Value="1" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter TargetName="PlaceholderText" Property="Opacity" Value="1" />
+                        </Trigger>
+                        <Trigger Property="Text" Value=" ">
+                            <Setter TargetName="PlaceholderText" Property="Opacity" Value="1" />
+                        </Trigger>
+                        <!-- When the TextBox has any text, hide the placeholder -->
+                        <Trigger Property="Text" Value="">
+                            <Setter TargetName="PlaceholderText" Property="Opacity" Value="1" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter TargetName="PlaceholderText" Property="Opacity" Value="1" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter TargetName="PlaceholderText" Property="Opacity" Value="1" />
+                        </Trigger>
+                        <!-- When the TextBox has focus, ensure the text -->
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter TargetName="PlaceholderText" Property="Opacity" Value="0" />
+                            <Setter Property="Foreground" Value="{StaticResource InputTextBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
